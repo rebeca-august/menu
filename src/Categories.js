@@ -5,6 +5,7 @@ const Categories = ({ filterItems, categories }) => {
     <div className="btn-container">
       {categories.map((category, index) => (
         <button
+          type="button"
           className="filter-btn"
           key={index}
           onClick={() => filterItems(category)}
