@@ -1,6 +1,18 @@
 import React from 'react'
 
-const Menu = ({ items }) => {
+type Item = {
+  id: number
+  title: string
+  category: string
+  price: number
+  img: string
+  desc: string
+}
+type Props = {
+  items: Item[]
+}
+
+const Menu = ({ items }: Props) => {
   return (
     <div className="section-center">
       {items.map((menuItem) => {

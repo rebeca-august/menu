@@ -1,6 +1,11 @@
 import React from 'react'
 
-const Categories = ({ filterItems, categories }) => {
+type Props = {
+  categories: string[]
+  filterItems: (category: string) => void
+}
+
+const Categories = ({ filterItems, categories }: Props) => {
   return (
     <div className="btn-container">
       {categories.map((category, index) => (
